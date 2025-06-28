@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Berat'ın Sitesi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
     }
-
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background: #f9f9f9;
       color: #333;
       padding: 0;
     }
-
     header {
-      background-color: #007acc;
+      background: #007acc;
       color: white;
       padding: 20px;
       text-align: center;
     }
-
     nav {
-      background-color: #005f99;
+      background: #005f99;
       padding: 10px 0;
       text-align: center;
     }
-
     nav a {
       color: white;
       margin: 0 12px;
@@ -38,11 +33,9 @@
       font-weight: bold;
       display: inline-block;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
     main {
       max-width: 900px;
       width: 90%;
@@ -52,44 +45,30 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-
     section {
       margin-bottom: 40px;
     }
-
     h2 {
       color: #007acc;
       margin-bottom: 10px;
       font-size: 26px;
     }
-
     p {
       font-size: 18px;
       line-height: 1.6;
     }
-
     footer {
       text-align: center;
       font-size: 14px;
       color: #777;
       margin: 40px 0 20px;
     }
-
-    /* Mobil ekranlar için özel ayarlar */
+    /* Mobil ekranlar için */
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 24px;
-      }
-      h2 {
-        font-size: 20px;
-      }
-      p {
-        font-size: 16px;
-      }
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
+      header h1 { font-size: 24px; }
+      h2 { font-size: 20px; }
+      p { font-size: 16px; }
+      nav a { display: block; margin: 8px 0; }
     }
   </style>
 </head>
@@ -102,6 +81,7 @@
     <a href="#anasayfa">Anasayfa</a>
     <a href="#hakkimda">Hakkımda</a>
     <a href="#iletisim">İletişim</a>
+    <a href="blog.html">Blog</a>
   </nav>
 
   <main>
@@ -117,7 +97,8 @@
 
     <section id="iletisim">
       <h2>İletişim</h2>
-      <p>Bana ulaşmak için: <strong>beratyilmaz@example.com</strong> (örnek adres)</p>
+      <p>E-posta: <a href="mailto:beratyillmaz48@gmail.com">beratyillmaz48@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/beratyilmz" target="_blank">@beratyilmz</a></p>
     </section>
   </main>
 
