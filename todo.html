@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Görev Listesi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f7f7f7;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      color: #007acc;
+    }
+    #gorevInput {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #ekleBtn {
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #ekleBtn:hover {
+      background-color: #005f99;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      background: white;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    li.completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+    button.kaldirBtn {
+      background: #e74c3c;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button.kaldirBtn:hover {
+      background: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Görev Listesi</h1>
+  <input type="text" id="gorevInput" placeholder="Yeni görev ekle..." />
+  <button id="ekleBtn">Ekle</button>
+
+  <ul id="gorevListesi"></ul>
+
+  <script>
+    const ekleBtn = document.getElementById('ekleBtn');
+    const gorevInput = document.getElementById('gorevInput');
+    const gorevListesi = document.getElementById('gorevListesi');
+
+    ekleBtn.addEventListener('click', () => {
+      const gorev = gorevInput.value.trim();
+      if (gorev === '') return alert('Lütfen bir görev girin!');
+
+      const li = document.createElement('li');
+      li.textContent = gorev;
+
+      // Görev tamamlandı için tıklama
+      li.addEventListener('click', () => {
+        li.classList.toggle('completed');
+      });
+
+      // Kaldır butonu
+      const kaldirBtn = document.createElement('button');
+      kaldirBtn.textContent = 'Sil';
+      kaldirBtn.classList.add('kaldirBtn');
+      kaldirBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        gorevListesi.removeChild(li);
+      });
+
+      li.appendChild(kaldirBtn);
+      gorevListesi.appendChild(li);
+
+      gorevInput.value = '';
+    });
+
+    // Enter tuşu ile ekleme
+    gorevInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        ekleBtn.click();
+      }
+    });
+  </script>
+</body>
+</html>
 
