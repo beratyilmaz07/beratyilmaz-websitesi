@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Berat'ın Blogu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      padding: 0;
+    }
+    header {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #005f99;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      width: 90%;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    article {
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #007acc;
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin: 40px 0 20px;
+    }
+    /* Mobil ekranlar için */
+    @media (max-width: 600px) {
+      header h1 { font-size: 24px; }
+      h2 { font-size: 20px; }
+      p { font-size: 16px; }
+      nav a { display: block; margin: 8px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Berat'ın Blogu</h1>
+  </header>
+
+  <nav>
+    <a href="index.html#anasayfa">Anasayfa</a>
+    <a href="index.html#hakkimda">Hakkımda</a>
+    <a href="index.html#iletisim">İletişim</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
+  <main>
+    <article>
+      <h2>İlk Blog Yazım</h2>
+      <p>Bugün yazılıma başlama yolculuğuma başladım. Çok heyecanlıyım ve öğrendiklerimi burada paylaşacağım.</p>
+    </article>
+
+    <article>
+      <h2>HTML ve CSS Öğreniyorum</h2>
+      <p>HTML ve CSS öğrenmek web dünyasının kapısını açıyor. Temel yapıları kavrayınca her şey daha kolay oluyor.</p>
+    </article>
+  </main>
+
+  <footer>
+    © 2025 Berat Yılmaz. Tüm hakları saklıdır.
+  </footer>
+</body>
+</html>
