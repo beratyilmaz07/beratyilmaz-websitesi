@@ -27,6 +27,15 @@
       background: #005f99;
       padding: 10px 0;
       text-align: center;
+      <nav>
+  <div class="menu-icon" id="menuIcon">☰</div>
+  <ul id="menuList" class="menu-list">
+    <li><a href="#anasayfa">Anasayfa</a></li>
+    <li><a href="#projelerim">Projelerim</a></li>
+    <li><a href="#iletisim">İletişim</a></li>
+  </ul>
+</nav>
+
     }
     nav a {
       color: white;
@@ -86,6 +95,58 @@
       transition: background-color 0.3s ease;
       display: inline-block;
       margin-top: 5px;
+      .menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  display: none; /* Başta gizli */
+  user-select: none;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+}
+
+/* Mobilde hamburger ve gizli menü */
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    background: #f5f5f5;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .menu-list.active {
+    display: flex;
+  }
+
+  .menu-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .menu-list li:last-child {
+    border-bottom: none;
+  }
+}
+
     }
 
     .btn:hover {
@@ -152,5 +213,14 @@
   <footer>
     © 2025 Berat Yılmaz. Tüm hakları saklıdır.
   </footer>
+  <script>
+  const menuIcon = document.getElementById('menuIcon');
+  const menuList = document.getElementById('menuList');
+
+  menuIcon.addEventListener('click', () => {
+    menuList.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
